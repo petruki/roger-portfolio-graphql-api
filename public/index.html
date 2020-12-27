@@ -44,12 +44,9 @@
         let query = `{check}`
         let result = await fetch('/graphql', {
           method: 'post',
-          body: JSON.stringify({query}),
-          headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': 'application/json',
-          }
+          body: JSON.stringify({query}).toString('base64')
         })
+        
         let json = await result.json()
         let code = document.getElementById('code')
         code.innerHTML = JSON.stringify(json, null, 2)

@@ -12,7 +12,7 @@ exports.handler = function(event, context, callback) {
   event.httpMethod = event.httpMethod
     ? event.httpMethod
     : event.requestContext.http.method
-  // Body is now parsed, re-encode to JSON for Apollo
+  // Body is now parsed, dencoded for Apollo
   event.body = Buffer.from(body, 'base64').toString('ascii')
   event.isBase64Encoded = false;
 
