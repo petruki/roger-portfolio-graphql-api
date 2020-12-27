@@ -7,7 +7,7 @@ const server = new ApolloServer({ typeDefs, resolvers })
 const handler = server.createHandler({ 
   cors: { 
     origin: '*', 
-    allowedHeaders: { 'Content-Type' } 
+    allowedHeaders: ['Accept', 'Content-Type']
   } 
 })
 
