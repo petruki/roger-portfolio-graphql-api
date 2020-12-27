@@ -1,6 +1,5 @@
 const arc = require('@architect/functions')
 const { ApolloServer } = require('apollo-server-lambda')
-const isBase64 = require('is-base64');
 const { typeDefs } = require('./schema')
 const { resolvers } = require('./resolver')
 
@@ -14,6 +13,10 @@ exports.handler = function(event, context, callback) {
     ? event.httpMethod
     : event.requestContext.http.method
 
+  console.log('body:', body)
+  console.log('process.env.NODE_ENV:', process.env.NODE_ENV)
+  console.log('body decoded:', Buffer.from(body, 'base64').toString('ascii'))
+  
   event.isBase64Encoded = true;
   handler(event, context, callback)
 }

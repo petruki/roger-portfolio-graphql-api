@@ -12,7 +12,6 @@
     "@begin/data": "",
     "apollo-server-lambda": "^2.19.1",
     "cross-env": "^7.0.3",
-    "is-base64": "^1.1.0",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.1",
     "tiny-json-http": "^7.3.0"
