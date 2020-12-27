@@ -4,7 +4,12 @@ const { typeDefs } = require('./schema')
 const { resolvers } = require('./resolver')
 
 const server = new ApolloServer({ typeDefs, resolvers })
-const handler = server.createHandler({ cors: { origin: '*' } })
+const handler = server.createHandler({ 
+  cors: { 
+    origin: '*', 
+    allowedHeaders: { 'Content-Type' } 
+  } 
+})
 
 exports.handler = function(event, context, callback) {
   const body = arc.http.helpers.bodyParser(event)
@@ -14,12 +19,5 @@ exports.handler = function(event, context, callback) {
     : event.requestContext.http.method
   // Body is now parsed, re-encode to JSON for Apollo
   event.body = JSON.stringify(body)
-
-  event.httpMethod = event.httpMethod || 'POST';
-  event.headers = {
-    'content-type': 'application/json',
-    ...(event.headers || {}),
-  };
-
   handler(event, context, callback)
 }
