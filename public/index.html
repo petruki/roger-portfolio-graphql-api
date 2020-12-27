@@ -44,7 +44,7 @@
         let query = `{check}`
         let result = await fetch('/graphql', {
           method: 'post',
-          body: JSON.stringify({query}).toString('base64')
+          body: JSON.stringify({query})
         })
         
         let json = await result.json()
