@@ -4,14 +4,9 @@ const { typeDefs } = require('./schema')
 const { resolvers } = require('./resolver')
 
 const server = new ApolloServer({ typeDefs, resolvers })
-const handler = server.createHandler()
+const handler = server.createHandler({ cors: { origin: '*' } })
 
 exports.handler = function(event, context, callback) {
-  const callbackFilter = function(error, output) {
-    output.headers['Access-Control-Allow-Origin'] = '*';
-    callback(error, output);
-  };
-
   const body = arc.http.helpers.bodyParser(event)
   // Support for AWS HTTP API syntax
   event.httpMethod = event.httpMethod
@@ -19,5 +14,12 @@ exports.handler = function(event, context, callback) {
     : event.requestContext.http.method
   // Body is now parsed, re-encode to JSON for Apollo
   event.body = JSON.stringify(body)
-  handler(event, context, callbackFilter)
+
+  event.httpMethod = event.httpMethod || 'POST';
+  event.headers = {
+    'content-type': 'application/json',
+    ...(event.headers || {}),
+  };
+
+  handler(event, context, callback)
 }
