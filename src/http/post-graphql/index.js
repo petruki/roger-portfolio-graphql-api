@@ -1,24 +1,13 @@
-let arc = require('@architect/functions')
-let {ApolloServer, gql} = require('apollo-server-lambda')
+const arc = require('@architect/functions')
+const { ApolloServer, gql } = require('apollo-server-lambda')
+const { typeDefs } = require('./schema')
+const { resolvers } = require('./resolver')
 
-let typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`
-
-let resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  },
-}
-
-let server = new ApolloServer({typeDefs, resolvers})
-let handler = server.createHandler()
+const server = new ApolloServer({ typeDefs, resolvers })
+const handler = server.createHandler({ cors: { origin: '*' }})
 
 exports.handler = function(event, context, callback) {
-  let body = arc.http.helpers.bodyParser(event)
-  console.log(body)
+  const body = arc.http.helpers.bodyParser(event)
   // Support for AWS HTTP API syntax
   event.httpMethod = event.httpMethod
     ? event.httpMethod
