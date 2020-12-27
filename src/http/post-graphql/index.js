@@ -13,10 +13,11 @@ exports.handler = function(event, context, callback) {
     ? event.httpMethod
     : event.requestContext.http.method
 
-  console.log('body:', body)
-  console.log('process.env.NODE_ENV:', process.env.NODE_ENV)
-  console.log('body decoded:', Buffer.from(body, 'base64').toString('ascii'))
-  
-  event.isBase64Encoded = true;
+  if (process.env.NODE_ENV !== 'testing') {
+    event.isBase64Encoded = false;
+  } else {
+    event.isBase64Encoded = true;
+  }
+
   handler(event, context, callback)
 }
