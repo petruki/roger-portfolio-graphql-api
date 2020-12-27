@@ -8,15 +8,16 @@ const server = new ApolloServer({ typeDefs, resolvers })
 const handler = server.createHandler({ cors: { origin: '*' } })
 
 exports.handler = function(event, context, callback) {
+  console.log('event.isBase64Encoded:', event.isBase64Encoded)
   const body = arc.http.helpers.bodyParser(event)
   // Support for AWS HTTP API syntax
   event.httpMethod = event.httpMethod
     ? event.httpMethod
     : event.requestContext.http.method
 
-  // Body is now parsed, verifies if enconded properly
-  if (!isBase64(body))
-    event.body = Buffer.from(body).toString('base64')
+  // Body is now parsed, decode for Apollo
+  event.body = Buffer.from(body, 'base64').toString('ascii')
+  event.isBase64Encoded = false;
 
   handler(event, context, callback)
 }
