@@ -115,14 +115,48 @@ const resolveSkill = () => {
             img: "https://raw.githubusercontent.com/petruki/rogerportfolio/master/src/images/skills/java.png",
             para:
                 "Started using Java from the beginning of my career. I have developed software of all kind, " +
-                "from desktop, web, mobile and webservices, to compiler, APIs, libraries and much more."
+                "from desktop, web, mobile and webservices, to compiler, APIs, libraries and much more.",
+            references: [
+                {
+                    title: 'Switcher Client SDK',
+                    description: 'Complete SDK for working with Switcher API.',
+                    link: 'https://github.com/switcherapi/switcher-client'
+                },
+                {
+                    title: 'Java CPU Simulator',
+                    description: 'This pure java application simulates thread working.',
+                    link: 'https://github.com/petruki/jcpu-simulator'
+                },
+                {
+                    title: 'Simple MySQL Library',
+                    description: 'Abstracts DB basic operations.',
+                    link: 'https://github.com/petruki/simple-mysql-crud'
+                }
+            ]
         },
         {
             id: 2,
             img: "https://raw.githubusercontent.com/petruki/rogerportfolio/master/src/images/skills/javascript.png",
             para:
                 "JavaScript is present on my stack since I started working as Full-stack developer. " +
-                "Never alone, JS is the very cornerstone of almost every recent framework I've learned so far."
+                "Never alone, JS is the very cornerstone of almost every recent framework I've learned so far.",
+            references: [
+                {
+                    title: 'Switcher JavaScript Client SDK',
+                    description: 'Complete SDK for working with Switcher API.',
+                    link: 'https://github.com/switcherapi/switcher-client-master'
+                },
+                {
+                    title: 'Web Crawler - Ohm Studio',
+                    description: 'Scrapes public projects to be available on the API player/search eangine.',
+                    link: 'https://github.com/petruki/ohm-project-scraper'
+                },
+                {
+                    title: 'Web Crawler - Google Currency',
+                    description: 'Scrapes currency, integrates with Slack for notification purposes.',
+                    link: 'https://github.com/petruki/google-currency-job'
+                }
+            ]
         },
         {
             id: 3,
@@ -130,7 +164,19 @@ const resolveSkill = () => {
             para:
                 "Skimming Module was my first contribution to Deno project. " +
                 "It allowed me to taste developing backend applications written in TypeScript and tons of out-of-the-box features " +
-                "that would not be trivial while using other technologies."
+                "that would not be trivial while using other technologies.",
+            references: [
+                {
+                    title: 'Skimming Lambda API',
+                    description: 'Lambda API that uses my Skimming module for Deno.',
+                    link: 'https://github.com/petruki/skimming-lambda-api'
+                },
+                {
+                    title: 'Skimming API',
+                    description: 'Skimming API is a RESTful API that uses Skimming and Oak Middleware modules to deliver a simple and efficient search engine.',
+                    link: 'https://github.com/petruki/skimming-api'
+                }
+            ]
         },
         {
             id: 4,
@@ -138,7 +184,15 @@ const resolveSkill = () => {
             para:
                 "Started using Spring framework since v3 and still incorporating it to my recent projects. " +
                 "Switcher AC is project that uses Spring Boot v2.3.7 and Spring Security v5.3 for handling all account profiler over the Switcher API platform. " +
-                "Spring framework was also chosen to orchestrate a multi-tenancy implementation on Trackerforce project."
+                "Spring framework was also chosen to orchestrate a multi-tenancy implementation on Trackerforce project.",
+            references: [
+                {
+                    title: 'Switcher Account Control',
+                    description: "Switcher Account Control is a simple API written in Java/Spring Boot responsible for managing " +
+                        "features access to the Switcher API showcase environment.",
+                    link: 'https://github.com/switcherapi/switcher-ac'
+                }
+            ]
         },
         {
             id: 5,
@@ -146,7 +200,19 @@ const resolveSkill = () => {
             para:
                 "For my front-end development framework of choice, Angular 2 was used to build Switcher Management, " +
                 "a project that interfaces with Switcher API and provides a simple yet robust UI. " +
-                "Recently, I have been using React as well as part of my front-end stack."
+                "Recently, I have been using React as well as part of my front-end stack.",
+            references: [
+                {
+                    title: 'Switcher Management',
+                    description: 'Switcher Management is a complete GUI written in Angular to interact with the Switcher API.',
+                    link: 'https://github.com/switcherapi/switcher-management'
+                },
+                {
+                    title: 'Page Replacement Algorithm',
+                    description: 'A simple real-time page replacement simulator.',
+                    link: 'https://github.com/petruki/page-replacement-algorithm'
+                }
+            ]
         },
         {
             id: 6,
@@ -154,7 +220,19 @@ const resolveSkill = () => {
             para:
                 "Nodejs has been the chosen runtime for some of my recent open-source projects. " +
                 "I have written APIs, web crawlers and libraries in conjunction with several different frameworks. " +
-                "Just to mention a few, express, express-graphql, socket.io, cheerio, supertest, jest, sinon, mocha, and much more."
+                "Just to mention a few, express, express-graphql, socket.io, cheerio, supertest, jest, sinon, mocha, and much more.",
+            references: [
+                {
+                    title: 'Switcher API',
+                    description: 'Complete and robust API for toggling features on the fly.',
+                    link: 'https://github.com/switcherapi/switcher-api'
+                },
+                {
+                    title: 'Switcher Load Balance',
+                    description: 'A simple yet functional load balance.',
+                    link: 'https://github.com/switcherapi/switcher-load-balance'
+                }
+            ]
         },
         {
             id: 7,

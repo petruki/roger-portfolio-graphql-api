@@ -28,7 +28,14 @@ const typeDefs = gql`
   type Skill {
     id: Int,
     img: String,
-    para: String
+    para: String,
+    references: [Reference]
+  }
+
+  type Reference {
+    title: String,
+    description: String,
+    link: String
   }
 
   type Contact {
