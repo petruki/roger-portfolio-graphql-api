@@ -10,7 +10,6 @@ const typeDefs = gql`
   }
 
   type Work {
-    id: Int,
     title: String,
     para: String,
     imageSrc: String,
@@ -26,7 +25,6 @@ const typeDefs = gql`
   }
 
   type Skill {
-    id: Int,
     img: String,
     para: String,
     references: [Reference]
