@@ -17,10 +17,7 @@ const typeDefs = gql`
   }
 
   type About {
-    aboutParaOne: String,
-    aboutParaTwo: String,
-    aboutParaThree: String,
-    aboutParaFour: String,
+    about: [String]
     aboutImage: String
   }
 

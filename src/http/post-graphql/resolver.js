@@ -85,19 +85,20 @@ const resolveWork = () => {
 
 const resolveAbout = () => {
     return {
-        aboutParaOne:
+        about: [
             "I dived into the coding world just before I entered the College. " + 
             "My first contact with programming was customizing and developing game mods which stimulated my sense of curiosity to learn more.",
-        aboutParaTwo:
+
             "Fast-forwarding to my first job as a Java Developer, I was challenged to write a compiler using Java CC. " +
             "The funny thing is that in terms of coding complexity, my first hands-on project is still in my top 5 challenging projects that I have ever worked with.",
-        aboutParaThree:
+
             "After gaining enough experience, I've assumed more complex projects on which programming was not the only variable. " + 
             "As a Senior Architect, I was able to use and learn several other skills to deliver the best solution through a concise roadmap that would lead to results.",
-        aboutParaFour:
+        
             "Throughout this exciting journey as a Software Engineer, I also have other interests that unconsciously go hand in hand, such as Music Production. " +
             "Being able to produce such materials has to do with translating tons of information into analog sound waves. " + 
             "And to be honest, I would have to create a new portfolio to just talk about this. =D",
+        ],
         aboutImage: "https://raw.githubusercontent.com/petruki/rogerportfolio/master/src/images/roger.png"
     }
 }
