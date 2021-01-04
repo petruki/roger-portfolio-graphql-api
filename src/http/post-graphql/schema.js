@@ -43,13 +43,18 @@ const typeDefs = gql`
     url: String
   }
 
+  type Activity {
+    urls: [String]
+  }
+
   type Query {
     check: String,
     header: Header,
     work: [Work],
     about: About,
     skills: [Skill],
-    contact: Contact
+    contact: Contact,
+    activity: Activity
   }
 `
 

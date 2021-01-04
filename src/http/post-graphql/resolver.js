@@ -15,6 +15,9 @@ const resolvers = {
         },
         contact() {
             return resolveContact()
+        },
+        activity() {
+            return resolveActivity()
         }
     }
 }
@@ -317,6 +320,20 @@ const resolveContact = () => {
             }
         ]
     }
+}
+
+const resolveActivity = () => {
+    return {
+        urls: [
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6749512647013744640',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6748004625326206977',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6744421462314110976',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6731693415425277952',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6726236202283999232',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6725538267720220672',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6708804928472805376'
+        ]
+    };
 }
 
 module.exports = { resolvers }
