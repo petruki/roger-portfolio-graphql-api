@@ -331,7 +331,13 @@ const resolveActivity = () => {
             'https://www.linkedin.com/embed/feed/update/urn:li:share:6731693415425277952',
             'https://www.linkedin.com/embed/feed/update/urn:li:share:6726236202283999232',
             'https://www.linkedin.com/embed/feed/update/urn:li:share:6725538267720220672',
-            'https://www.linkedin.com/embed/feed/update/urn:li:share:6708804928472805376'
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6708804928472805376',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6698745189499990018',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6698345803351773184',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6692510872528670720',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6678379849071120384',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6673738758015209473',
+            'https://www.linkedin.com/embed/feed/update/urn:li:share:6661452604582707200'
         ]
     };
 }
