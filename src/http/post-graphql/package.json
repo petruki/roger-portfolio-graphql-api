@@ -3,6 +3,7 @@
   "dependencies": {
     "@architect/functions": "^3.13.8",
     "apollo-server-lambda": "^2.19.1",
-    "graphql": "^14.6.0"
+    "graphql": "^14.6.0",
+    "mongoose": "^5.11.10"
   }
 }

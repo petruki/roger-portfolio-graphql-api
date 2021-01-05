@@ -1,6 +1,15 @@
 const { gql } = require('apollo-server-lambda')
 
 const typeDefs = gql`
+  type Portfolio {
+    header: Header,
+    work: [Work],
+    about: About,
+    skills: [Skill],
+    contact: Contact,
+    activity: Activity
+  }
+
   type Header {
     name: String,
     avatarImg: String,
@@ -49,12 +58,7 @@ const typeDefs = gql`
 
   type Query {
     check: String,
-    header: Header,
-    work: [Work],
-    about: About,
-    skills: [Skill],
-    contact: Contact,
-    activity: Activity
+    portfolio: Portfolio
   }
 `
 
