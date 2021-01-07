@@ -15,7 +15,7 @@ const portfolioSchema = new mongoose.Schema({
     about: aboutSchema,
     skills: [skillSchema],
     contact: contactSchema,
-    activity: activitySchema
+    activity: [activitySchema]
 });
 
 const Portfolio = mongoose.model('Portfolio', portfolioSchema);
