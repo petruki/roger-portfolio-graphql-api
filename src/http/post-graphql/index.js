@@ -4,7 +4,7 @@ const { typeDefs } = require('./schema');
 const { resolvers } = require('./resolver');
 
 const server = new ApolloServer({ typeDefs, resolvers });
-const handler = server.createHandler({ cors: { origin: '*' } });
+const handler = server.createHandler({ expressGetMiddlewareOptions: { cors: { origin: '*' } } });
 
 require('./db/mongoose');
 
