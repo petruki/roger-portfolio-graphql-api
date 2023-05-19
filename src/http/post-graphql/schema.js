@@ -7,7 +7,7 @@ const typeDefs = gql`
     about: About,
     skills: [Skill],
     contact: Contact,
-    activity: Activity
+    activity: [Activity]
   }
 
   type Header {
@@ -53,7 +53,8 @@ const typeDefs = gql`
   }
 
   type Activity {
-    urls: [String]
+    tags: [String],
+    url: String
   }
 
   type Query {
