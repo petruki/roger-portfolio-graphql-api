@@ -1,12 +1,9 @@
 const mongoose = require('mongoose');
 
 const activitySchema = new mongoose.Schema({
-    tags: [{
+    urls: [{
         type: String
-    }],
-    url: {
-        type: String
-    }
+    }]
 });
 
 module.exports = activitySchema;
